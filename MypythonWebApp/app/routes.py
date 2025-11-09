@@ -17,7 +17,7 @@ def index():
     
     ok = query_test("SELECT 1")  ## test the database connection
     if ok:
-        return "<h1>Flask is running! Database connection is Successful!</h1>"
+        return render_template("index.html")
     else:
         return "<h1>Flask is running! Database test query returned no results!</h1>"
    
@@ -33,12 +33,12 @@ def login():
        print("Hi!")  ## erase this because it just there to prevent error
     return render_template("login.html") ## handle the login form submission
     
-@bp.route("/register", methods=["GET", "POST"]) ## localhost/register
-def register():
+@bp.route("/registration", methods=["GET", "POST"]) ## localhost/register
+def registration():
     """
     this is the route for the registration page
     """
     if request.method == "POST":
        ## register.py script logic here
        print("Hi!")  ## erase this because it just there to prevent error
-    return render_template("register.html") ## handle the registration form submission  
+    return render_template("registration.html") ## handle the registration form submission  
