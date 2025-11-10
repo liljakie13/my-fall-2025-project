@@ -1,4 +1,6 @@
 /* use '/*' for comments */
+
+/* top navigattion bar */
 * {
     box-sizing: border-box;
     margin: 0;
@@ -73,6 +75,7 @@
     font-size: 2rem;
 }
 
+/* login page */
 .login-container {
     display: flex;
     justify-content: center;
@@ -99,6 +102,8 @@
     color:#070707;
     font-size: 30px;
     font-weight: 600;
+    position: relative;
+    top: -10px;
 }
 
 .input-box .input-field {
@@ -108,7 +113,7 @@
     padding: 0 25px;
     margin-bottom: 15px;
     border-radius: 30px;
-    border: none;
+    border: 2px solid #070707;
 }
 
 ::placeholder{
@@ -146,4 +151,77 @@
     color: #070707;
     font-weight: 600;
     text-decoration: none;
+}
+
+/* signup/registration page */
+.signup-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: #fff
+}
+
+.signup-box {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    width: 440px;
+    height: 480px;
+    padding: 30px;
+}
+
+.signup-header {
+    text-align: center;
+    margin: 20px 0 4 0;
+}
+
+.signup-header header {
+    color:#070707;
+    font-size: 30px;
+    font-weight: 600;
+    position: relative;
+    top: -10px;
+}
+
+.signup-box .input-field {
+    width: 100%;
+    height: 60px;
+    font-size: 17px;
+    padding: 0 25px;
+    margin-bottom: 15px;
+    border-radius: 30px;
+    border: 2px solid #070707;
+}
+
+.login-link {
+    text-align: center;
+    font-size: 15px;
+    margin-top: 20px;
+}
+
+.login-link a{
+    color: #070707;
+    font-weight: 600;
+    text-decoration: none;
+}
+
+.password-req {
+    list-style-position: inside;
+}
+
+.password-req li {
+    padding-left: 25px;
+    margin-top: 5px;
+    font-size: small;
+}
+
+.user-req p {
+    position: relative;
+    top: -10px;
+}
+
+.registration-submission { /* needed a little space b/w the button and requirements list */
+    position: relative;
+    bottom: -10px;
 }
