@@ -46,3 +46,7 @@ def registration():
 @bp.route("/feedback", methods=["GET", "POST"]) ##
 def feedback():
     return render_template("feedback.html") ##
+
+@bp.route("/menu", methods=["GET", "POST"]) ##
+def menu():
+    return render_template("menu.html") ##
