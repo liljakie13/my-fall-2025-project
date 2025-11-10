@@ -42,3 +42,14 @@ def registration():
        ## register.py script logic here
        print("Hi!")  ## erase this because it just there to prevent error
     return render_template("registration.html") ## handle the registration form submission  
+
+@bp.route("/feedback", methods=["GET", "POST"]) ## localhost/register
+def feedback():
+    """
+    this is the route for the feedback page
+    """
+    if request.method == "POST":
+       ## register.py script logic here
+       print("Hi!")  ## erase this because it just there to prevent error
+    return render_template("feedback.html") ## handle the registration form submission  
+
