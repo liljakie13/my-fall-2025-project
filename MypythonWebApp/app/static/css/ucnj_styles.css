@@ -285,10 +285,11 @@
 }
 
 .feedback-date input {
-  padding: 6px 12px;
-  width: 50%;
-  border-radius: 30px;
-  margin: 0 auto;
+    padding: 6px 12px;
+    width: 50%;
+    border-radius: 30px;
+    margin: 0 auto;
+    height: 60px;
 }
 
 .feedback-email {
@@ -308,7 +309,7 @@
   padding: 6px 12px;
   width: 50%;
   border-radius: 30px;
-  
+  height: 60px;
 }
 
 .feedback-input {
