@@ -10,7 +10,7 @@
 
 /* top navigattion bar */
 .navigation {
-    background:#070707;
+    background:#212121;
     height: 80px;
     display: flex;
     align-items: center;
@@ -355,4 +355,54 @@
     -webkit-transform: translate(-50%, -50%);
     -ms-transform: translate(-50%, -50%);
     cursor: pointer
+}
+
+/* home page */
+
+.index-container {
+
+}
+
+.index-header {
+    display: flex;
+    justify-content: center;
+    padding-top: 10vh;
+    font-size: xx-large;
+    z-index: 1;
+    color: #fff;
+}
+
+.index-links {
+    display: flex;
+    justify-content: center; /* putting this below ruins the layout */
+    padding-top: 20px;
+    gap: 40px;
+    z-index: 1;
+    margin-top: 25vh;
+}
+
+.index-links a {
+    text-decoration: none;
+    padding: 24px 80px;
+    border: 2px solid;
+    border-color:#ffffff;
+    border-width: 5px;
+    color: #fff;
+    font-size: 1.3rem;
+    border-radius: 30px;
+}
+
+.index-links a:hover {
+    color: rgb(192, 206, 114);
+    transition: all 0.3s ease;
+}
+
+.index-background img {
+    filter: brightness(25%);
+    position: absolute;
+    height: 100%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); /* centers img */
+    z-index: -1; /* -1 makes sure its behind everything */
 }
