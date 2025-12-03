@@ -49,3 +49,9 @@ def feedback():
         return handle_feedback(request)
     return render_template("feedback.html") ##
 
+@bp.route("/menu", methods=["GET", "POST"]) ## localhost/register
+def menu():
+    if request.method == "POST":
+        print("hi")
+    return render_template("menu.html") ##
+
