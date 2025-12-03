@@ -43,12 +43,9 @@ def registration():
        return handle_registration(request) # handle_registration is in register.py
     return render_template("registration.html") ## handle the registration form submission  
 
-@bp.route("/feedback", methods=["GET", "POST"]) ##
+@bp.route("/feedback", methods=["GET", "POST"]) ## localhost/register
 def feedback():
     if request.method == "POST":
         return handle_feedback(request)
     return render_template("feedback.html") ##
 
-@bp.route("/menu", methods=["GET", "POST"]) ##
-def menu():
-    return render_template("menu.html") ##
