@@ -30,8 +30,7 @@ def login():
     this is the route for the login page
     """
     if request.method == "POST":
-       ## login.py script logic here
-       print("Hi!")  ## erase this because it just there to prevent error
+       return handle_login(request)
     return render_template("login.html") ## handle the login form submission
     
 @bp.route("/registration", methods=["GET", "POST"]) ## localhost/register
@@ -52,6 +51,6 @@ def feedback():
 @bp.route("/menu", methods=["GET", "POST"]) ## localhost/register
 def menu():
     if request.method == "POST":
-        print("hi")
+        print("hi") # prevents error
     return render_template("menu.html") ##
 
