@@ -12,8 +12,14 @@ create table if not exists users(
    username varchar(50) not null unique,
    email varchar(100) not null unique,
    password varchar(255) not null unique,
-   phone varchar(20),
    balance decimal(10,2) default 50.00, --preloaded balance
    is_verified boolean default false,
    created_at timestamp default current_timestamp
+);
+
+CREATE TABLE feedback (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    date DATE,
+    email VARCHAR(255),
+    comment TEXT NOT NULL
 );
