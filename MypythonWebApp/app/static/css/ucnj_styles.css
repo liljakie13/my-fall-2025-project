@@ -375,7 +375,7 @@
 .index-links {
     display: flex;
     justify-content: center; /* putting this below ruins the layout */
-    padding-top: 20px;
+    padding-top: 15px;
     gap: 40px;
     z-index: 1;
     margin-top: 25vh;

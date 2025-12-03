@@ -6,10 +6,12 @@ giving us the ability to basically ijmport scripts from this folder
 It also loads the configurations from the config file, and it initializes extensions, as well as 
 regestiring blueprints(routes) into the application
 """
-
+from dotenv import load_dotenv
+load_dotenv()
 from flask import Flask ##this class FLask lets us create an instance of flask
 from .db import init_app ## this is the function that closes our db connection automatically
-from .routes import bp ##well create this file later, with reports
+from .routes import bp
+import os ##well create this file later, with reports
 ## and well imprt blueprint here
 ## and we do that to register routes into our application
 
