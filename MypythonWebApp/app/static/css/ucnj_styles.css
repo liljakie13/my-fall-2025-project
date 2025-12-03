@@ -6,7 +6,7 @@
     font-family: 'Kumbh Sans', sans-serif;
 }
 .navigation {
-    background:#070707;
+    background:#212121;
     height: 80px;
     display: flex;
     align-items: center;
@@ -108,7 +108,7 @@
     padding: 0 25px;
     margin-bottom: 15px;
     border-radius: 30px;
-    border: none;
+    border: 2px solid #070707;
 }
 
 ::placeholder{
@@ -116,7 +116,7 @@
     color: #aaaaaa
 }
 
-.submission-btn {
+.login-btn {
     width: 100%;
     height: 60px;
     background: #222;
@@ -146,4 +146,256 @@
     color: #070707;
     font-weight: 600;
     text-decoration: none;
+}
+
+/* signup/registration page */
+.signup-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: #fff
+}
+
+.signup-box {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    width: 440px;
+    height: 480px;
+    padding: 30px;
+}
+
+.signup-header {
+    text-align: center;
+    margin: 20px 0 4 0;
+}
+
+.signup-header header {
+    color:#070707;
+    font-size: 30px;
+    font-weight: 600;
+    position: relative;
+    top: -10px;
+}
+
+.signup-box .input-field {
+    width: 100%;
+    height: 60px;
+    font-size: 17px;
+    padding: 0 25px;
+    margin-bottom: 15px;
+    border-radius: 30px;
+    border: 2px solid #070707;
+}
+
+.login-link {
+    text-align: center;
+    font-size: 15px;
+    margin-top: 20px;
+}
+
+.login-link a{
+    color: #070707;
+    font-weight: 600;
+    text-decoration: none;
+}
+
+.password-req {
+    list-style-position: inside;
+}
+
+.password-req li {
+    padding-left: 25px;
+    margin-top: 5px;
+    font-size: small;
+}
+
+.user-req p {
+    position: relative;
+    top: -10px;
+}
+
+.input-submission { /* needed a little space b/w the button and requirements list */
+    position: relative;
+    bottom: -10px;
+}
+
+.signup-btn {
+    width: 100%;
+    height: 60px;
+    background: #222;
+    border: none;
+    border-radius: 30px;
+    cursor: pointer;
+    color: #fff;
+}
+
+.signup-submit label {
+    position: absolute;
+    top: 45%;
+    left: 50%;
+    color: #ffffff;
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    cursor: pointer
+}
+
+/* feeedback page */
+.feedback-container {
+    display: flex;
+    flex-direction: column;
+    background: #fff;
+    padding: 0 20px;
+    box-sizing: border-box;
+    margin: 0 auto;
+    padding: 100px 20px 20px 20px; /* top right bottom left */
+    max-width: 1600px;
+}
+
+.feedback-header {
+  height: 80px;
+  width: 100%;
+  max-width: 1300px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.feedback-date {
+  /* puts the writing and input box next to each other */
+  display: flex;
+  align-items: center;
+}
+
+.feedback-date p {
+  height: 80px;
+  width: 100%;
+  max-width: 1300px;
+  margin: 0 auto;
+  padding: 0 50px;
+}
+
+.feedback-date input {
+    padding: 6px 12px;
+    width: 50%;
+    border-radius: 30px;
+    margin: 0 auto;
+    height: 60px;
+}
+
+.feedback-email {
+  display: flex;
+  align-items: center;
+}
+
+.feedback-email p {
+  height: 80px;
+  width: 100%;
+  max-width: 1300px;
+
+  padding: 0 50px;
+}
+
+.feedback-email input {
+  padding: 6px 12px;
+  width: 50%;
+  border-radius: 30px;
+  height: 60px;
+}
+
+.feedback-input {
+    text-align: center;
+}
+
+.feedback-input p {
+  height: 80px;
+  width: 100%;
+  max-width: 1300px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.feedback-textarea {
+    width:75%;
+    height: 140px;
+    font-size: 17px;
+    border-radius: 30px;
+    margin-bottom: 15px;
+    overflow-y: auto;
+
+    text-align: left;
+}
+
+.feedback-btn {
+    width: 50%;
+    height: 60px;
+    background: #222;
+    border: none;
+    border-radius: 30px;
+    cursor: pointer;
+    color: #fff;
+}
+
+.feedback-submit label {
+    position: absolute;
+    top: 45%;
+    left: 50%;
+    color: #ffffff;
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    cursor: pointer
+}
+
+/* home page */
+
+.index-container {
+
+}
+
+.index-header {
+    display: flex;
+    justify-content: center;
+    padding-top: 10vh;
+    font-size: xx-large;
+    z-index: 1;
+    color: #fff;
+}
+
+.index-links {
+    display: flex;
+    justify-content: center; /* putting this below ruins the layout */
+    padding-top: 15px;
+    gap: 40px;
+    z-index: 1;
+    margin-top: 25vh;
+}
+
+.index-links a {
+    text-decoration: none;
+    padding: 24px 80px;
+    border: 2px solid;
+    border-color:#ffffff;
+    border-width: 5px;
+    color: #fff;
+    font-size: 1.3rem;
+    border-radius: 30px;
+}
+
+.index-links a:hover {
+    color: rgb(192, 206, 114);
+    transition: all 0.3s ease;
+}
+
+.index-background img {
+    filter: brightness(25%);
+    position: absolute;
+    height: 100%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); /* centers img */
+    z-index: -1; /* -1 makes sure its behind everything */
 }
