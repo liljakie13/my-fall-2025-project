@@ -108,7 +108,7 @@
     padding: 0 25px;
     margin-bottom: 15px;
     border-radius: 30px;
-    border: none;
+    border: 2px solid #070707;
 }
 
 ::placeholder{
@@ -116,7 +116,7 @@
     color: #aaaaaa
 }
 
-.submission-btn {
+.login-btn {
     width: 100%;
     height: 60px;
     background: #222;
