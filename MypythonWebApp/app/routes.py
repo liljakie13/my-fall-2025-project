@@ -1,7 +1,7 @@
 """
 This is the routes.py script will contain the routes/path for our application
 """
-from flask import Blueprint, render_template, request  ## Blueprint is a way to organize a group of related routes and other code. render_template is used to render html templates
+from flask import Blueprint, render_template, request, session, redirect  ## Blueprint is a way to organize a group of related routes and other code. render_template is used to render html templates
 from .db import query_test  ## import the query_test function from the db.py file
 from .login import handle_login ## import the login functions from the login.py file
 from .register import handle_registration ## import the register functions from the register.py file
@@ -54,3 +54,7 @@ def menu():
         print("hi") # prevents error
     return render_template("menu.html") ##
 
+@bp.route("/logout")
+def logout():
+    session.clear()
+    return redirect("/")
