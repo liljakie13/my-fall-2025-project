@@ -33,8 +33,9 @@ def handle_login(request):
     cursor.close()
 
     if user: ### if the login is successful
-        session['user_id'] = user['id'] 
+        session['user_id'] = user['id'] ## 'session' tracks info related to a specific user
         session['username'] = user['username']
         return redirect("/")
     else:
+
         return redirect("/login")
