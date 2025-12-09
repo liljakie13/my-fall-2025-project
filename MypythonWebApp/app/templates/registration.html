@@ -7,6 +7,11 @@
             <div class="signup-header">
                 <header>Sign Up</header>
             </div>
+            {% if request.args.get('error') == 'username' %} <!--HTML reads error value from register.py-->
+                <p style="color: red; text-align: center;">Username must be at least 5 characters</p> <!--if the error is with the username, it shows this-->
+            {% elif request.args.get('error') == 'password' %}
+                <p style="color: red; text-align: center;">Password must be 8+ chars with an uppercase, lowercase, and symbol</p>
+            {% endif %}
            <form action="/registration" method="POST">
             <div class="input-box">
                 <input type="email" class="input-field" name="email" placeholder="Email" required>
