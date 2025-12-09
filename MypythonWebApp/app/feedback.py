@@ -10,15 +10,11 @@ def handle_feedback(request):
     email = request.form.get("email") or None ## stores as null ^^
     comment = request.form.get("comment")
 
-    # checks if comment was provided
-    if not comment:
-        return redirect("/feedback")
-
-    # Connect to DB
+    # Connect to DB so feedback can be stored
     db = get_db()
     cursor = db.cursor()
 
-    # inserrt feedback into database
+    # insert feedback into database
     sql = """
         INSERT INTO feedback (date, email, comment)
         VALUES (%s, %s, %s)
@@ -27,5 +23,5 @@ def handle_feedback(request):
     db.commit()
     cursor.close()
 
-    # back home
+    # back home after submitting feedback form
     return redirect("/")

@@ -12,9 +12,6 @@ def handle_login(request):
     email_or_username = request.form.get("email_or_username") 
     password = request.form.get("password")
     # takes what the user inputs
-
-    if not email_or_username or not password:
-        return redirect("/login") # page refreshes if something isn't inputted
     
     hashed_password = hashlib.sha256(password.encode()).hexdigest()
     # hashes the inputted password so it can compare it to what's in the db
@@ -33,9 +30,8 @@ def handle_login(request):
     cursor.close()
 
     if user: ### if the login is successful
-        session['user_id'] = user['id'] ## 'session' tracks info related to a specific user
-        session['username'] = user['username']
+        session['user_id'] = user['id'] ## 'session' tracks info related to a specific user, their ID from the DB is stored in the browser 
+        session['username'] = user['username'] ## user ID + username is stored in the session
         return redirect("/")
     else:
-
-        return redirect("/login")
+        return redirect("/login?error=invalid") # sends user to login page with extra details provided in the html

@@ -56,5 +56,5 @@ def menu():
 
 @bp.route("/logout")
 def logout():
-    session.clear()
+    session.clear() ## clears the users data before redirecting
     return redirect("/")

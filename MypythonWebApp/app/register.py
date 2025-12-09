@@ -25,15 +25,12 @@ def handle_registration(request): #Handles user registration and stores user det
     email = request.form.get("email")
     username = request.form.get("username")
     password = request.form.get("password")
-
-    if not email or not username or not password: # checks that all fields are filled
-        return redirect("/registration") # checks that all fields are filled
     
     if len(username) < USERNAME_MIN_LENGTH or len(username) > USERNAME_MAX_LENGTH:
-        return redirect("/registration") # ^^^ if username isn't valid
+        return redirect("/registration?error=username") # ^^^ if username isn't valid
     
     if not validate_password(password): # if the password wasn't valid
-        return redirect("/registration")
+        return redirect("/registration?error=password")
     
     # hashing the password before its stored
     hashed_password = hashlib.sha256(password.encode()).hexdigest()

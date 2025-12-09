@@ -7,6 +7,9 @@
             <div class="login-header">
                 <header>Login</header>
             </div>
+            {% if request.args.get('error') == 'invalid' %}
+                <p style="color: red; text-align: center;">Invalid username or password</p>
+            {% endif %}
             <form action="/login" method="POST">
             <div class="input-box">
                 <input type="text" name="email_or_username" class="input-field" placeholder="Email or Username" required>
