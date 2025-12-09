@@ -33,5 +33,5 @@ def handle_login(request):
         session['user_id'] = user['id'] ## 'session' tracks info related to a specific user, their ID from the DB is stored in the browser 
         session['username'] = user['username'] ## user ID + username is stored in the session
         return redirect("/")
-    else:
+    else: ## login not successful
         return redirect("/login?error=invalid") # sends user to login page with extra details provided in the html
